@@ -15,10 +15,7 @@ class Model_api extends CI_Model
     public function getTotalPublicDigitalLibrary($id)
     {   
     	$query = $this->db->query('select count(*) AS totalCount from courses where public_library = 1 AND status = "Active"'); 
-    	// $data['library'] = array(
-     //        'totalCount'=>$query->row()->totalCount
-     //        );
-        //echo json_encode($query->result());
+    
         
         return $query->row()->totalCount;
     }
